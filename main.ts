@@ -2,11 +2,12 @@
 //% category="Line Tracking Sensor"
 namespace line_tracking_sensor {
     /**
-     * Returns the reflection, in [0, 100] where darker color is closer to 0
-     * and brighter is closer to 100.
+     * Returns the reflection provided by a MH Sensor connected to the given pin.
+     * This is a value in [0, 100] where a darker color is closer to 0
+     * and a brighter color is closer to 100.
      */
     //% blockId="reflection"
-    //% block="reflection at %pin"
+    //% block="reflection %pin"
     //% weight=65
     export function reflection(pin: AnalogPin) {
         return Math.round(pins.map(
