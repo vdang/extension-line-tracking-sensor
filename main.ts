@@ -11,7 +11,7 @@ namespace line_tracking_sensor {
      * and a brighter color is closer to 100.
      */
     //% blockId="reflection"
-    //% block="reflection %pin"
+    //% block="reflected light %pin"
     //% weight=65
     export function reflection(pin: AnalogPin) {
         let reading = Math.constrain(pins.analogReadPin(pin), lower, upper)
