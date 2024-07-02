@@ -1,8 +1,9 @@
 //% color=#cc00ff icon="\u2590" block="Line Tracking Sensor"
 //% category="Line Tracking Sensor"
 namespace line_tracking_sensor {
+    let mid = 44
     let lower = 34
-    let upper = 52
+    let upper = 250
 
     /**
      * Returns the reflection provided by a MH Sensor connected to the given pin.
@@ -14,7 +15,11 @@ namespace line_tracking_sensor {
     //% weight=65
     export function reflection(pin: AnalogPin) {
         let reading = Math.constrain(pins.analogReadPin(pin), lower, upper)
-        reading = Math.map(reading, lower, upper, 0, 100)
+        if (reading < mid) {
+            reading = Math.map(reading, lower, mid, 0, 50)
+        } else {
+            reading = Math.map(reading, mid, upper, 50, 100)
+        }
         reading = 100 - reading
         return reading
 
