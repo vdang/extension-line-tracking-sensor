@@ -47,7 +47,7 @@ namespace line_tracking_sensor {
     //% blockId="reflected_light"
     //% block="improved reflected light %pin"
     //% weight=65
-    function reflected_light(pin: AnalogPin) {
+    export function reflected_light(pin: AnalogPin) {
         return pins.map(
             100 - Math.max(Math.min(pins.analogReadPin(pin), 100), 40),
             0,
