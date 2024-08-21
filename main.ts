@@ -39,4 +39,21 @@ namespace line_tracking_sensor {
         //     100
         // ))
     }
+    /**
+     * Returns the reflection provided by a MH Sensor connected to the given pin.
+     * This is a value in [0, 100] where a darker color is closer to 0
+     * and a brighter color is closer to 100.
+     */
+    //% blockId="reflected_light"
+    //% block="improved reflected light %pin"
+    //% weight=65
+    function reflected_light(pin: AnalogPin) {
+        return pins.map(
+            100 - Math.max(Math.min(pins.analogReadPin(pin), 100), 40),
+            0,
+            60,
+            0,
+            100
+        )
+    }
 }
