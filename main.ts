@@ -40,8 +40,8 @@ namespace line_tracking_sensor {
     //     // ))
     // }
     /**
-     * Returns the reflection provided by a MH Sensor connected to the given pin.
-     * This is a value in [0, 100] where a darker color is closer to 0
+     * Returns the amount of reflected light provided by a MH Sensor connected to
+     * the given pin. This is a value in [0, 100] where a darker color is closer to 0
      * and a brighter color is closer to 100.
      */
     //% blockId="reflected_light"
