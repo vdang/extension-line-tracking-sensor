@@ -1,5 +1,3 @@
-//% color=#cc00ff icon="\u2590" block="Line Tracking Sensor"
-//% category="Line Tracking Sensor"
 namespace line_tracking_sensor {
     // let mid = 44
     // let lower = 34
