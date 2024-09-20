@@ -54,4 +54,22 @@ namespace line_tracking_sensor {
             100
         )
     }
+
+    /**
+     * Returns the amount of reflected light provided by a MH Sensor connected to
+     * the given pin. This is a value in [0, 100] where a darker color is closer to 0
+     * and a brighter color is closer to 100.
+     */
+    //% blockId="reflected_light_broad"
+    //% block="reflected light (broad) %pin"
+    //% weight=65
+    export function reflected_light_broad(pin: AnalogPin) {
+        return pins.map(
+            320 - Math.max(Math.min(pins.analogReadPin(pin), 320), 40),
+            0,
+            280,
+            0,
+            100
+        )
+    }
 }
